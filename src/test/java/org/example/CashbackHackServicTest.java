@@ -1,7 +1,9 @@
 package org.example;
+
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+
 public class CashbackHackServicTest {
     @Test
     public void shouldReturn999From1() {
@@ -16,7 +18,7 @@ public class CashbackHackServicTest {
         CashbackHackServic service = new CashbackHackServic();
         int actual = service.remain(500);
         int expected = 500;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -24,7 +26,7 @@ public class CashbackHackServicTest {
         CashbackHackServic service = new CashbackHackServic();
         int actual = service.remain(999);
         int expected = 1;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -32,7 +34,7 @@ public class CashbackHackServicTest {
         CashbackHackServic service = new CashbackHackServic();
         int actual = service.remain(1000);
         int expected = 0;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -40,7 +42,7 @@ public class CashbackHackServicTest {
         CashbackHackServic service = new CashbackHackServic();
         int actual = service.remain(1001);
         int expected = 999;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -48,7 +50,6 @@ public class CashbackHackServicTest {
         CashbackHackServic service = new CashbackHackServic();
         int actual = service.remain(2000);
         int expected = 0;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
-
 }
